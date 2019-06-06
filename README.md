@@ -1,0 +1,16 @@
+Port of node-wot to Samsung's IoTJS
+- Based on node-wot 0.6.1
+- Currently only core functionality and few bindings
+  - http client, file, and mqtt client binding
+    - http subscription missing
+    - https basic authentication missing
+  - Exposed thing missing rxjs/Subject for event state
+  - wot-impl missing rxjs/Observable for discovery
+  - helpers missing getAddresses functionality
+  - servient missing functionality to run scripts and a lot more
+- Large heap limit needed to load rx.js
+- Clone and compile iotjs with "--jerry-heaplimit=2048 --jerry-profile=es2015-subset --cmake-param=-DENABLE_MODULE_HTTPS=ON --cmake-param=-DENABLE_MODULE_MQTT=ON"
+- Then
+  - cd scripts/examples
+  - iotjs httptest.js
+  - iotjs mqtttest.js

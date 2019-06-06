@@ -1,0 +1,17 @@
+{
+    "@type" : "Thing",
+    "id": "urn:dev:wot:com:example:pets",
+    "name": "MyPetsThing",
+    "description" : "My Pets Thing",
+    "properties": {
+        "status": {
+            "description" : "List of pets",
+            "type": "string",
+            "readOnly": true,
+            "forms": [{
+                "href": "http://private-f84d7-nodewot.apiary-mock.com/api/pets",
+                "contentType": "application/json"
+            }]
+        }
+    }
+}
